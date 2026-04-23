@@ -1,0 +1,67 @@
+/* PATIENT INFO */
+.patient-info { background: var(--cream); }
+
+.info-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px; margin-top: 56px;
+}
+
+.info-card {
+  background: white; border-radius: 16px;
+  padding: 32px 28px;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: all 0.3s;
+}
+
+.info-card:hover { box-shadow: 0 16px 40px rgba(13,61,56,0.1); }
+
+.info-card-header {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 24px;
+}
+
+.info-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: var(--blush); display: flex; align-items: center;
+  justify-content: center; color: var(--teal); font-size: 1.1rem;
+}
+
+.info-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 600; color: var(--deep-teal);
+}
+
+.info-row {
+  display: flex; justify-content: space-between;
+  align-items: center; padding: 10px 0;
+  border-bottom: 1px solid var(--blush);
+  font-size: 0.84rem;
+}
+
+.info-row:last-child { border-bottom: none; }
+.info-row .key { color: var(--muted); }
+.info-row .val { font-weight: 500; color: var(--charcoal); }
+
+.insurance-logos {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px;
+}
+
+.ins-badge {
+  padding: 5px 12px; border-radius: 30px;
+  background: var(--blush); font-size: 0.72rem;
+  font-weight: 500; color: var(--teal);
+  border: 1px solid rgba(46,158,132,0.2);
+}
+
+@media (max-width: 1000px) {
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}

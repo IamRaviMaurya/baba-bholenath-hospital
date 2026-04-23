@@ -1,0 +1,75 @@
+/* BOOKING MODAL */
+.modal-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(13,61,56,0.85); backdrop-filter: blur(8px);
+  z-index: 2000; align-items: center; justify-content: center;
+}
+
+.modal-overlay.open { display: flex; }
+
+.modal {
+  background: white; border-radius: 24px; padding: 40px;
+  width: 480px; max-width: 95vw;
+  animation: fadeUp 0.4s ease;
+  max-height: 90vh; overflow-y: auto;
+}
+
+.modal h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; color: var(--deep-teal); margin-bottom: 6px;
+}
+
+.modal p { font-size: 0.85rem; color: var(--muted); margin-bottom: 28px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+
+.form-group label {
+  font-size: 0.72rem; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--muted);
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 16px; border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px; font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem; outline: none;
+  transition: border-color 0.3s;
+  background: var(--warm-white);
+}
+
+.form-group input:focus,
+.form-group select:focus { border-color: var(--teal); }
+
+.modal-footer {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 24px;
+}
+
+.close-btn {
+  background: none; border: none; cursor: pointer;
+  font-size: 0.85rem; color: var(--muted); padding: 10px;
+}
+
+.close-btn:hover { color: var(--charcoal); }
+
+@media (max-width: 650px) {
+  .modal {
+    padding: 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .close-btn {
+    align-self: flex-start;
+  }
+}

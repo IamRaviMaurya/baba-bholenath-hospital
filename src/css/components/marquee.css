@@ -1,0 +1,35 @@
+/* MARQUEE */
+.marquee-wrap {
+  background: var(--deep-teal);
+  padding: 14px 0; overflow: hidden;
+  border-top: 1px solid rgba(201,168,76,0.3);
+  border-bottom: 1px solid rgba(201,168,76,0.3);
+}
+
+.marquee {
+  display: flex; gap: 60px; width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee span {
+  font-size: 0.75rem; color: rgba(247,243,238,0.6);
+  text-transform: uppercase; letter-spacing: 0.14em;
+  white-space: nowrap;
+  display: flex; align-items: center; gap: 12px;
+}
+
+.marquee span::before {
+  content: '✦';
+  color: var(--gold); font-size: 0.6rem;
+}
+
+@media (max-width: 700px) {
+  .marquee-wrap {
+    padding: 12px 0;
+  }
+
+  .marquee span {
+    font-size: 0.68rem;
+    gap: 10px;
+  }
+}

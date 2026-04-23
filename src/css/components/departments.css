@@ -1,0 +1,87 @@
+/* DEPARTMENTS */
+.depts { background: var(--cream); }
+
+.depts-header {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.dept-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.dept-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px 22px;
+  text-align: center;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.dept-card::before {
+  content: '';
+  position: absolute; bottom: 0; left: 0;
+  width: 100%; height: 3px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.4s;
+  transform-origin: left;
+}
+
+.dept-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(46,158,132,0.2);
+  box-shadow: 0 20px 50px rgba(13,61,56,0.12);
+}
+
+.dept-card:hover::before { transform: scaleX(1); }
+
+.dept-icon {
+  width: 64px; height: 64px;
+  background: var(--blush);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.5rem;
+  color: var(--teal);
+  transition: all 0.4s;
+}
+
+.dept-card:hover .dept-icon {
+  background: var(--deep-teal);
+  color: var(--gold);
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.dept-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--charcoal); margin-bottom: 8px;
+}
+
+.dept-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+@media (max-width: 1100px) {
+  .dept-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .dept-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  .dept-grid {
+    grid-template-columns: 1fr;
+  }
+}

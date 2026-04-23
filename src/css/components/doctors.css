@@ -1,0 +1,117 @@
+/* DOCTORS */
+.doctors { background: var(--warm-white); }
+
+.doctor-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 28px; margin-top: 60px;
+}
+
+.doctor-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: all 0.4s;
+  position: relative;
+}
+
+.doctor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(13,61,56,0.14);
+}
+
+.doctor-card-top {
+  background: var(--deep-teal);
+  padding: 30px;
+  display: flex; gap: 20px; align-items: center;
+  position: relative; overflow: hidden;
+}
+
+.doctor-card-top::after {
+  content: '';
+  position: absolute; bottom: -30px; right: -30px;
+  width: 100px; height: 100px; border-radius: 50%;
+  background: rgba(201,168,76,0.1);
+}
+
+.doctor-avatar {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal), var(--light-teal));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem; font-weight: 600;
+  color: white; flex-shrink: 0;
+  border: 3px solid rgba(201,168,76,0.4);
+}
+
+.doctor-info-top h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; font-weight: 600;
+  color: var(--cream); margin-bottom: 4px;
+}
+
+.doctor-info-top p {
+  font-size: 0.78rem; color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
+.doctor-card-body { padding: 24px 28px; }
+
+.doctor-meta {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 16px; margin-bottom: 20px;
+}
+
+.meta-item { display: flex; flex-direction: column; gap: 3px; }
+
+.meta-label {
+  font-size: 0.68rem; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--muted);
+}
+
+.meta-val {
+  font-size: 0.9rem; font-weight: 500; color: var(--charcoal);
+}
+
+.meta-val.fee {
+  font-family: 'Space Mono', monospace;
+  color: var(--teal); font-size: 0.95rem;
+}
+
+.timing-bar {
+  background: var(--blush);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.78rem; color: var(--deep-teal);
+}
+
+.timing-bar i { color: var(--gold); }
+
+@media (max-width: 1000px) {
+  .doctor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .doctor-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .doctor-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .doctor-meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .doctor-card-body {
+    padding: 22px 18px;
+  }
+}
