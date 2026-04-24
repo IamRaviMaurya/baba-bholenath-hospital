@@ -9,9 +9,9 @@ const Footer = () => {
         <div className="footer-brand">
           <div className="logo">
             <div className="cross"></div>
-            <h2>Aarogya Hospital</h2>
+            <h2>Baba Bholenath Hospital</h2>
           </div>
-          <p>Your trusted partner in health and wellness. Providing compassionate care with cutting-edge medical technology since 2009.</p>
+          <p>Your trusted partner in health and wellness. Providing compassionate care with cutting-edge medical technology since 1996.</p>
           {/* Social Links */}
           <div className="social-links">
             <a href="#" className="social-link"><i className="fab fa-facebook-f"></i></a>
@@ -45,7 +45,7 @@ const Footer = () => {
       </div>
       {/* Footer Bottom */}
       <div className="footer-bottom">
-        <p>&copy; 2024 Aarogya Multispeciality Hospital. All rights reserved. Made with <span>♥</span> for better healthcare.</p>
+        <p>&copy; {new Date().getFullYear()} Baba Bholenath Hospital. All rights reserved. Made with <span>♥</span> for better healthcare.</p>
         {/* Legal Links */}
         <div>
           <a href="#" style={{ color: 'rgba(247,243,238,0.5)', textDecoration: 'none', marginRight: '20px' }}>Privacy Policy</a>
