@@ -9,6 +9,11 @@ nav {
   transition: all 0.4s;
 }
 
+.theme-toggle,
+.theme-toggle i {
+  color: #0d3d38;
+}
+
 .nav-logo {
   display: flex; align-items: center; gap: 12px;
 }

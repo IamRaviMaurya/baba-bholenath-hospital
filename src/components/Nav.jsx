@@ -49,7 +49,11 @@ const Nav = ({ onBookAppointment, onToggleTheme, theme }) => {
         <li><a href="#info" onClick={handleLinkClick}>Patient Info</a></li>
         <li><a href="#location" onClick={handleLinkClick}>Contact</a></li>
         <li><a href="#" className="nav-cta" onClick={() => { handleLinkClick(); onBookAppointment(); }}>Book Appointment</a></li>
-        <li><button className="theme-toggle" onClick={onToggleTheme} aria-label="Toggle theme">{theme === 'light' ? '🌙' : '☀️'}</button></li>
+        <li>
+  <button className="theme-toggle" onClick={onToggleTheme} aria-label="Toggle theme">
+    <i className={`fa-solid ${theme === 'light' ? 'fa-moon' : 'fa-sun'}`}></i>
+  </button>
+</li>
       </ul>
     </nav>
   );
