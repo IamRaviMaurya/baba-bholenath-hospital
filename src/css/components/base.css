@@ -8,6 +8,22 @@
     --charcoal: #1C1C1E;
     --muted: #6B7280;
     --blush: #F0E8D8;
+    --warm-white-rgb: 253, 250, 246;
+    --charcoal-rgb: 28, 28, 30;
+  }
+
+  [data-theme="dark"] {
+    --cream: #2D2D2D;
+    --deep-teal: #1A6B5C;
+    --teal: #2E9E84;
+    --light-teal: #4CAF50;
+    --gold: #FFD700;
+    --warm-white: #1C1C1E;
+    --charcoal: #FDFAF6;
+    --muted: #B0B0B0;
+    --blush: #3A3A3A;
+    --warm-white-rgb: 28, 28, 30;
+    --charcoal-rgb: 253, 250, 246;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }

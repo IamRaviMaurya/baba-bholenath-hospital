@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Marquee from './components/Marquee';
@@ -10,9 +10,11 @@ import Location from './components/Location';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
 import useScrollReveal from './hooks/useScrollReveal';
+import viteIcon from './assets/gemini-svg.svg?url';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [theme, setTheme] = useState('light');
 
   const handleBookAppointment = () => {
     setIsModalOpen(true);
@@ -22,12 +24,27 @@ function App() {
     setIsModalOpen(false);
   };
 
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  useEffect(() => {
+    const link = document.querySelector('link[rel="icon"]');
+    if (link) {
+      link.href = viteIcon;
+    }
+  }, []);
+
   // Initialize scroll reveal
   useScrollReveal();
 
   return (
     <>
-      <Nav onBookAppointment={handleBookAppointment} />
+      <Nav onBookAppointment={handleBookAppointment} onToggleTheme={toggleTheme} theme={theme} />
       <Hero onBookAppointment={handleBookAppointment} />
       <Marquee />
       <Departments />
