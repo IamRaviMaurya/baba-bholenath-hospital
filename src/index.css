@@ -1,4 +1,10 @@
 @import './css/components/base.css';
+@import './css/components/hms.css';
+@import './css/components/hms-app.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 *,
 *::before,

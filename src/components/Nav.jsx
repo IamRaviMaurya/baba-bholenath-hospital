@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import '../css/components/nav.css';
 
-const Nav = ({ onBookAppointment, onToggleTheme, theme }) => {
+const Nav = ({ onBookAppointment, onToggleTheme, theme, onStaffLogin }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -48,6 +48,7 @@ const Nav = ({ onBookAppointment, onToggleTheme, theme }) => {
         <li><a href="#services" onClick={handleLinkClick}>Services</a></li>
         <li><a href="#info" onClick={handleLinkClick}>Patient Info</a></li>
         <li><a href="#location" onClick={handleLinkClick}>Contact</a></li>
+        <li><a href="#" className="nav-cta staff-login" onClick={() => { handleLinkClick(); onStaffLogin(); }}>Staff Login</a></li>
         <li><a href="#" className="nav-cta" onClick={() => { handleLinkClick(); onBookAppointment(); }}>Book Appointment</a></li>
         <li>
   <button className="theme-toggle" onClick={onToggleTheme} aria-label="Toggle theme">

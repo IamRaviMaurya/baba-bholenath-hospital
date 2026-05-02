@@ -66,6 +66,13 @@ nav {
 
 .nav-cta:hover { background: var(--teal) !important; }
 
+.staff-login {
+  background: var(--gold) !important;
+  color: var(--deep-teal) !important;
+}
+
+.staff-login:hover { background: #c9a84c !important; }
+
 /* Hamburger Menu */
 .hamburger {
   display: none;
